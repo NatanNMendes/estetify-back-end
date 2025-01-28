@@ -1,6 +1,7 @@
 package com.estetify.backend.models;
 
 import com.estetify.backend.utils.Gender;
+import com.estetify.backend.utils.Sexuality;
 import com.estetify.backend.utils.UsersType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -36,6 +37,10 @@ public abstract class Users {
     @Enumerated(EnumType.STRING)
     @Column(name = "gender", nullable = false)
     private Gender gender;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "sexuality", nullable = false)
+    private Sexuality sexuality;
 
     @NotBlank(message = "O telefone é obrigatório.")
     @Column(name = "phone",unique = true, nullable = false)

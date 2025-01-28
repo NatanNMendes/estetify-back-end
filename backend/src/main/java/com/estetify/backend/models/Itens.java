@@ -2,7 +2,6 @@ package com.estetify.backend.models;
 
 import com.estetify.backend.utils.ItensType;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -29,21 +28,20 @@ public abstract class Itens {
     private String name;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private ItensType itensType;
+
     @Column(name = "price", nullable = false)
     private Double price;
 
-    @Enumerated(EnumType.STRING)
     @Column(name = "discount", nullable = false)
     private Double discount;
-
-    @Column(name = "address", updatable = false)
-    private String address;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "profile_photo")
-    private String profilePhoto;
+    @Column(name = "image")
+    private String image;
 
     @PrePersist
     protected void onCreate() {
