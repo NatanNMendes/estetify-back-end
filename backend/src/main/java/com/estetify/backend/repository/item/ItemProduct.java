@@ -1,4 +1,4 @@
-package com.estetify.backend.repository;
+package com.estetify.backend.repository.item;
 
 import com.estetify.backend.models.Itens;
 import com.estetify.backend.utils.Dimensions;

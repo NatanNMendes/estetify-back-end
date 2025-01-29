@@ -1,7 +1,7 @@
 package com.estetify.backend.models;
 
-import com.estetify.backend.utils.PaymentStatus;
-import com.estetify.backend.utils.TypePaymentMethod;
+import com.estetify.backend.utils.enums.PaymentStatus;
+import com.estetify.backend.utils.enums.TypePaymentMethod;
 
 import java.util.Date;
 

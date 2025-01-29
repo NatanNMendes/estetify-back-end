@@ -1,4 +1,4 @@
-package com.estetify.backend.utils;
+package com.estetify.backend.utils.enums;
 
 public enum PaymentStatus {
     APPROVED,      // Aprovado

@@ -1,6 +1,6 @@
 package com.estetify.backend.models;
 
-import com.estetify.backend.utils.ItensType;
+import com.estetify.backend.utils.enums.ItensType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
