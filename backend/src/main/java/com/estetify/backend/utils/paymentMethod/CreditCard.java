@@ -1,8 +1,12 @@
 package com.estetify.backend.utils.paymentMethod;
 
+import com.estetify.backend.models.PaymentMethod;
+import com.estetify.backend.utils.enums.PaymentStatus;
+import com.estetify.backend.utils.enums.TypePaymentMethod;
+
 import java.util.Date;
 
-public class CreditCard{
+public class CreditCard extends PaymentMethod {
     private String cardNumber;
     private String cardholderName;
     private Date expirationDate;
@@ -10,7 +14,8 @@ public class CreditCard{
     private String installments;
     private String cardBrand;
 
-    public CreditCard(String cardNumber, String cardholderName, Date expirationDate, String cvv, String installments, String cardBrand) {
+    public CreditCard(Integer id, TypePaymentMethod typePaymentMethod, double amount, String currency, Date transactionDate, PaymentStatus status, String cardNumber, String cardholderName, Date expirationDate, String cvv, String installments, String cardBrand) {
+        super(id, typePaymentMethod, amount, currency, transactionDate, status);
         this.cardNumber = cardNumber;
         this.cardholderName = cardholderName;
         this.expirationDate = expirationDate;

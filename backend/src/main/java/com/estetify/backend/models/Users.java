@@ -61,7 +61,7 @@ public abstract class Users {
     @Column(name = "profile_photo")
     private String profilePhoto;
 
-    protected Users(Long id, String name, Date birthDate, Gender gender, Sexuality sexuality, String phone, String email, String password, UsersType usersType, String address, String profilePhoto) {
+    public Users(Long id, String name, Date birthDate, Gender gender, Sexuality sexuality, String phone, String email, String password, UsersType usersType, String address, String profilePhoto) {
         this.id = id;
         this.name = name;
         this.birthDate = birthDate;
@@ -87,7 +87,7 @@ public abstract class Users {
         return name;
     }
 
-    protected void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -95,7 +95,7 @@ public abstract class Users {
         return birthDate;
     }
 
-    protected void setBirthDate(Date birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -103,7 +103,7 @@ public abstract class Users {
         return gender;
     }
 
-    protected void setGender(Gender gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
@@ -111,7 +111,7 @@ public abstract class Users {
         return sexuality;
     }
 
-    protected void setSexuality(Sexuality sexuality) {
+    public void setSexuality(Sexuality sexuality) {
         this.sexuality = sexuality;
     }
 
@@ -119,7 +119,7 @@ public abstract class Users {
         return phone;
     }
 
-    protected void setPhone(String phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -127,7 +127,7 @@ public abstract class Users {
         return email;
     }
 
-    protected void setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -135,7 +135,7 @@ public abstract class Users {
         return password;
     }
 
-    protected void setPassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -143,7 +143,7 @@ public abstract class Users {
         return usersType;
     }
 
-    protected void setUsersType(UsersType usersType) {
+    public void setUsersType(UsersType usersType) {
         this.usersType = usersType;
     }
 
@@ -151,7 +151,7 @@ public abstract class Users {
         return address;
     }
 
-    protected void setAddress(String address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
@@ -159,7 +159,7 @@ public abstract class Users {
         return createdAt;
     }
 
-    protected void setCreatedAt() {
+    public void setCreatedAt() {
         this.createdAt = LocalDateTime.now();
     }
 
@@ -167,7 +167,7 @@ public abstract class Users {
         return profilePhoto;
     }
 
-    protected void setProfilePhoto(String profilePhoto) {
+    public void setProfilePhoto(String profilePhoto) {
         this.profilePhoto = profilePhoto;
     }
 }

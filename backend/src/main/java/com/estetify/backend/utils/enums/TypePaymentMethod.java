@@ -1,7 +1,8 @@
 package com.estetify.backend.utils.enums;
 
 public enum TypePaymentMethod {
+    CASH,
     TICKET, // Boleto
     PIX, // Pix
-    CREDITCARD // Cartão de Credito
+    CREDIT_CARD; // Cartão de Credito
 }
