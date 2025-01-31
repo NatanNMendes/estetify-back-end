@@ -2,13 +2,16 @@ package com.estetify.backend.models;
 
 import com.estetify.backend.utils.enums.PaymentStatus;
 import com.estetify.backend.utils.enums.TypePaymentMethod;
-
+import lombok.Getter;
+import lombok.Setter;
 import java.util.Date;
 
+@Getter
+@Setter
 public abstract class PaymentMethod {
     private Integer id;
     private TypePaymentMethod typePaymentMethod;
-    private double amount;
+    private Double amount;
     private String currency;
     private Date transactionDate;
     private PaymentStatus status;
@@ -19,54 +22,6 @@ public abstract class PaymentMethod {
         this.amount = amount;
         this.currency = currency;
         this.transactionDate = transactionDate;
-        this.status = status;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public TypePaymentMethod getTypePaymentMethod() {
-        return typePaymentMethod;
-    }
-
-    public void setTypePaymentMethod(TypePaymentMethod typePaymentMethod) {
-        this.typePaymentMethod = typePaymentMethod;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
-
-    public Date getTransactionDate() {
-        return transactionDate;
-    }
-
-    public void setTransactionDate(Date transactionDate) {
-        this.transactionDate = transactionDate;
-    }
-
-    public PaymentStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(PaymentStatus status) {
         this.status = status;
     }
 }

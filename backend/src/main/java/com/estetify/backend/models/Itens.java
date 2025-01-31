@@ -1,46 +1,43 @@
 package com.estetify.backend.models;
 
 import com.estetify.backend.utils.enums.ItensType;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "itens")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter
+@Setter
+@MappedSuperclass
 public abstract class Itens {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @JsonProperty("id")
     private Long id;
 
-    @NotBlank(message = "O nome é obrigatório.")
-    @Size(max = 100, message = "O nome não pode ter mais de 100 caracteres.")
-    @Column(name = "name")
+    @NotBlank(message = "\n" + "The name is mandatory")
+    @Size(max = 255, message = "\n" + "The name cannot be longer than 100 characters")
+    @JsonProperty("name")
     private String name;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @JsonProperty("itensType")
     private ItensType itensType;
 
-    @Column(name = "price", nullable = false)
+    @JsonProperty("price")
     private Double price;
 
-    @Column(name = "discount", nullable = false)
+    @JsonProperty("discount")
     private Double discount;
 
-    @Column(name = "created_at", updatable = false)
+    @JsonProperty("createdAt")
     private LocalDateTime createdAt;
 
-    @Column(name = "image")
+    @JsonProperty("image")
     private String image;
 
     @PrePersist
