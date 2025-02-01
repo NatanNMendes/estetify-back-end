@@ -1,6 +1,5 @@
 package com.estetify.backend.utils.user;
 
-
 import com.estetify.backend.models.Users;
 import com.estetify.backend.utils.enums.Gender;
 import com.estetify.backend.utils.enums.Sexuality;
@@ -9,7 +8,6 @@ import com.estetify.backend.utils.user.userStrategy.UserStrategy;
 import com.estetify.backend.utils.user.userStrategy.strategies.CompanyStrategy;
 import com.estetify.backend.utils.user.userStrategy.strategies.CustomerStrategy;
 import com.estetify.backend.utils.user.userStrategy.strategies.HairdresserStrategy;
-
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;

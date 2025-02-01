@@ -40,6 +40,16 @@ public abstract class Itens {
     @JsonProperty("image")
     private String image;
 
+    public Itens(Long id, String name, ItensType itensType, Double price, Double discount, LocalDateTime createdAt, String image) {
+        this.id = id;
+        this.name = name;
+        this.itensType = itensType;
+        this.price = price;
+        this.discount = discount;
+        this.createdAt = createdAt;
+        this.image = image;
+    }
+
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
