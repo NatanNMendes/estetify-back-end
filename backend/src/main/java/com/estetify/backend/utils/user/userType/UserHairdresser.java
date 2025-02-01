@@ -1,4 +1,4 @@
-package com.estetify.backend.utils.user;
+package com.estetify.backend.utils.user.userType;
 
 import com.estetify.backend.models.Itens;
 import com.estetify.backend.models.Users;
