@@ -1,14 +1,12 @@
-package com.estetify.backend.utils.paymentMethod.paymentMethodStrategy.strategies;
+package com.estetify.backend.utils.paymentMethod;
 
 import com.estetify.backend.models.PaymentMethod;
 import com.estetify.backend.utils.enums.PaymentStatus;
-import com.estetify.backend.utils.paymentMethod.paymentMethodStrategy.PaymentMethodStrategy;
-import com.estetify.backend.utils.paymentMethod.paymentMethodType.PaymentMethodCreditCard;
 
 import java.util.Date;
 import java.util.Map;
 
-public class CreditCardPaymentStrategy implements PaymentMethodStrategy {
+class StrategyPaymentMethodCreditCard implements StrategyPaymentMethod {
     @Override
     public PaymentMethod createPayment(Integer id, Double amount, String currency, Date transactionDate, PaymentStatus status, Map<String, Object> additionalAttributes) {
         String cardNumber = additionalAttributes.getOrDefault("cardNumber", "").toString();

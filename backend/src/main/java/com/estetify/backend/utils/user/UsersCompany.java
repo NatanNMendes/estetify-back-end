@@ -1,4 +1,4 @@
-package com.estetify.backend.utils.user.userType;
+package com.estetify.backend.utils.user;
 
 import com.estetify.backend.models.Users;
 import com.estetify.backend.utils.enums.Gender;
@@ -13,7 +13,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-public class UserCompany extends Users {
+class UsersCompany extends Users {
 
     @JsonProperty("tradeName")
     private String tradeName;
@@ -33,7 +33,7 @@ public class UserCompany extends Users {
     @JsonProperty("description")
     private String description;
 
-    public UserCompany(Long id, String name, Date birthDate, Gender gender, Sexuality sexuality, String email, String password, UsersType usersType, String address, String profilePhoto, String tradeName, String taxID, Date establishmentDate, ArrayList<OperatingHours> operatingHours, String socialMediaLinks, String description) {
+    UsersCompany(Long id, String name, Date birthDate, Gender gender, Sexuality sexuality, String email, String password, UsersType usersType, String address, String profilePhoto, String tradeName, String taxID, Date establishmentDate, ArrayList<OperatingHours> operatingHours, String socialMediaLinks, String description) {
         super(id, name, birthDate, gender, sexuality, email, password, usersType, address, profilePhoto);
         this.tradeName = tradeName;
         this.taxID = taxID;

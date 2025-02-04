@@ -1,4 +1,4 @@
-package com.estetify.backend.utils.paymentMethod.paymentMethodType;
+package com.estetify.backend.utils.paymentMethod;
 
 import com.estetify.backend.models.PaymentMethod;
 import com.estetify.backend.utils.enums.PaymentStatus;
@@ -10,13 +10,13 @@ import java.util.Date;
 
 @Getter
 @Setter
-public class PaymentMethodTicket extends PaymentMethod {
+class PaymentMethodTicket extends PaymentMethod {
     private String ticketNumber;
     private Date expirationDate;
     private String barcode;
     private String issuer;
 
-    public PaymentMethodTicket(Integer id, Double amount, String currency, Date transactionDate, PaymentStatus status, String ticketNumber, Date expirationDate, String barcode, String issuer) {
+    PaymentMethodTicket(Integer id, Double amount, String currency, Date transactionDate, PaymentStatus status, String ticketNumber, Date expirationDate, String barcode, String issuer) {
         super(id, TypePaymentMethod.TICKET, amount, currency, transactionDate, status);
         this.ticketNumber = ticketNumber;
         this.expirationDate = expirationDate;

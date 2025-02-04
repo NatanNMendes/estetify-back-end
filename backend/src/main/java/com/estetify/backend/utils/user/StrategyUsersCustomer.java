@@ -1,19 +1,17 @@
-package com.estetify.backend.utils.user.userStrategy.strategies;
+package com.estetify.backend.utils.user;
 
 import com.estetify.backend.models.Itens;
 import com.estetify.backend.models.Users;
 import com.estetify.backend.utils.enums.Gender;
 import com.estetify.backend.utils.enums.Sexuality;
 import com.estetify.backend.utils.enums.UsersType;
-import com.estetify.backend.utils.user.userStrategy.UserStrategy;
-import com.estetify.backend.utils.user.userType.UserCustomer;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-public class CustomerStrategy implements UserStrategy {
+class StrategyUsersCustomer implements StrategyUsers {
     @Override
     public Users createUser(Long id, String name, Date birthDate, Gender gender, Sexuality sexuality, String email, String password, String address, String profilePhoto, Map<String, Object> additionalAttributes) {
         ArrayList<Itens> shoppingCart = new ArrayList<>();
@@ -46,7 +44,7 @@ public class CustomerStrategy implements UserStrategy {
             }
         }
 
-        return new UserCustomer(id, name, birthDate, gender, sexuality, email, password, UsersType.CUSTOMER, address, profilePhoto, shoppingCart, purchasedItens, purchaseHistory);
+        return new UsersCustomer(id, name, birthDate, gender, sexuality, email, password, UsersType.CUSTOMER, address, profilePhoto, shoppingCart, purchasedItens, purchaseHistory);
     }
 }
 
