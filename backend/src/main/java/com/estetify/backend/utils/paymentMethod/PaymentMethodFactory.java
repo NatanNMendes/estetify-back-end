@@ -10,6 +10,7 @@ import com.estetify.backend.utils.paymentMethod.paymentMethodStrategy.strategies
 import com.estetify.backend.utils.paymentMethod.paymentMethodStrategy.strategies.TicketPaymentStrategy;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,7 +24,7 @@ public class PaymentMethodFactory {
         strategies.put(TypePaymentMethod.TICKET, new TicketPaymentStrategy());
     }
 
-    public static PaymentMethod createPayment(TypePaymentMethod type, Integer id, Double amount, String currency, LocalDateTime transactionDate, PaymentStatus status, Map<String, Object> additionalAttributes) {
+    public static PaymentMethod createPayment(TypePaymentMethod type, Integer id, Double amount, String currency, Date transactionDate, PaymentStatus status, Map<String, Object> additionalAttributes) {
         PaymentMethodStrategy strategy = strategies.get(type);
         if (strategy == null) {
             throw new IllegalArgumentException("Unsupported payment type: " + type);

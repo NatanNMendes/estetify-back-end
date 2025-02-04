@@ -8,7 +8,7 @@ import com.estetify.backend.utils.paymentMethod.paymentMethodType.PaymentMethodC
 import java.util.Date;
 import java.util.Map;
 
-class CreditCardPaymentStrategy implements PaymentMethodStrategy {
+public class CreditCardPaymentStrategy implements PaymentMethodStrategy {
     @Override
     public PaymentMethod createPayment(Integer id, Double amount, String currency, Date transactionDate, PaymentStatus status, Map<String, Object> additionalAttributes) {
         String cardNumber = additionalAttributes.getOrDefault("cardNumber", "").toString();
